@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Learninglobal | Ma bande et moi !</title>
+<style>
+:root{--orange:#f47721;--deep:#b94c0d;--cream:#fff8ef;--ink:#29303a;--teal:#0b8587;--line:#f1d5bc}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff9f1}
+header{background:linear-gradient(115deg,#ff9a3d,#f36a1c);color:white;padding:26px max(18px,calc((100vw - 1000px)/2));}
+.brand{display:flex;align-items:center;gap:16px}.mascot{width:74px;height:90px;flex:none}.brand h1{margin:0;font-size:clamp(26px,4vw,42px)}.brand p{margin:2px 0}
+main{max-width:1000px;margin:22px auto 80px;padding:0 16px}
+.intro,.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;margin:18px 0;box-shadow:0 5px 18px #8d4a1610}
+h2{color:var(--deep);margin:0 0 8px;font-size:23px}h3{margin:15px 0 8px;color:#99500f}.sub{color:#66717b;font-size:14px;margin:0 0 16px}
+.num{display:inline-grid;place-items:center;background:var(--orange);color:white;border-radius:50%;width:34px;height:34px;margin-right:9px}
+.builder{overflow:auto}.builder table{width:100%;border-collapse:collapse;min-width:600px}th{background:#ffe2c5;color:#783807;text-align:left}th,td{border:1px solid #f3d6bb;padding:9px}tr:nth-child(even) td{background:#fff9f3}
+.rowq{padding:12px 0;border-bottom:1px dashed #ead9c8}.rowq:last-child{border:0}
+select,button{font:inherit}select{padding:7px 10px;border:1.5px solid #e4b58c;border-radius:9px;background:#fffdf9;max-width:100%;min-width:140px}
+button{cursor:pointer;border:0;border-radius:10px;padding:9px 15px;font-weight:700}
+.primary{background:var(--orange);color:white}.secondary{background:#fff0df;color:#9c480f}.choice{border:1.5px solid #e7c6a7;background:white;margin:4px;padding:7px 12px;font-weight:500}
+.choice.selected{background:#ffe0bb;border-color:var(--orange)}
+.controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.feedback{font-weight:700;margin:12px 0 0}.ok{color:#16734c}.bad{color:#ae3b25}
+.pair{display:grid;grid-template-columns:1fr minmax(150px, 240px);gap:10px;align-items:center;margin:10px 0}
+.tokens{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}.token{background:#fff0dc;border:1px solid #e6b783;color:#60390f;padding:7px 11px}
+.token.used{opacity:.35;pointer-events:none}.answer{border:2px dashed #e7b47f;background:#fffaf4;border-radius:10px;padding:9px;min-height:48px}
+.small{font-size:13px;color:#68727a}.pill{display:inline-block;background:#e3f5f2;color:#0c6c6b;border-radius:50px;padding:3px 11px;font-weight:700;font-size:13px}
+.sticky{position:sticky;bottom:10px;z-index:3;background:#fffaf1f2;border:1px solid #f2d0b3;padding:11px 15px;border-radius:15px;display:flex;justify-content:space-between;align-items:center;gap:8px;box-shadow:0 4px 18px #74441e22}
+@media(max-width:600px){.pair{grid-template-columns:1fr}.mascot{width:54px;height:70px}.panel{padding:16px}.sticky{font-size:13px}}
+@media print{header{print-color-adjust:exact}.controls,.sticky{display:none}.panel{break-inside:avoid}}
+</style></head><body>
+<header><div class="brand">
+<svg class="mascot" viewBox="0 0 90 110" role="img" aria-label="Learninglobal smiley orange"><circle cx="45" cy="23" r="19" fill="#fff3cc" stroke="#fff" stroke-width="3"/><path d="M37 21h1m14 0h1" stroke="#b94c0d" stroke-width="4" stroke-linecap="round"/><path d="M35 28q10 12 21 0" fill="none" stroke="#b94c0d" stroke-width="3.5" stroke-linecap="round"/><path d="M45 45v35M45 57L17 73M45 57l28 16M45 79L24 103M45 79l21 24" stroke="#fff" stroke-width="9" stroke-linecap="round"/><path d="M45 45v35M45 57L17 73M45 57l28 16M45 79L24 103M45 79l21 24" stroke="#fce0a6" stroke-width="5" stroke-linecap="round"/></svg>
+<div><div style="font-weight:900;letter-spacing:2px">LEARNINGLOBAL</div><h1>Ma bande et moi !</h1><p>Le français en action • A1–A2 • Vocabulaire de l’amitié</p></div></div></header>
+<main>
+<section class="intro"><span class="pill">Activités interactives</span><h2 style="margin-top:10px">Salut ! Moi, c’est Lucas.</h2><p>Découvre mes amis : Emma, Adam, Chloé, Hugo et Inès. Lis, choisis et construis des phrases !</p><p class="small">Toutes les activités sont fermées. Une seule activité porte sur le masculin et le féminin des adjectifs. Clique sur « Vérifier » pour voir ton résultat.</p></section>
+<section class="panel"><h2><span class="num">★</span>Mes Sentence Builders</h2><p class="sub">Lis les modèles. Tu peux les utiliser dans les activités.</p>
+<div class="builder"><h3>1. Décrire une personne</h3><table><tr><th>Qui ?</th><th>Verbe</th><th>Description</th><th>Et…</th></tr>
+<tr><td>Mon ami Adam</td><td>est</td><td>grand et sportif.</td><td>Il est toujours de bonne humeur.</td></tr>
+<tr><td>Ma meilleure amie Emma</td><td>est</td><td>rousse, mince et souriante.</td><td>Elle est sincère avec moi.</td></tr>
+<tr><td>Chloé</td><td>est</td><td>petite, brune et réservée.</td><td>Elle porte des lunettes.</td></tr>
+<tr><td>Hugo</td><td>est</td><td>blond et drôle.</td><td>Il a beaucoup d’humour.</td></tr>
+<tr><td>Inès</td><td>est</td><td>grande et ouverte.</td><td>Elle vient de Lyon.</td></tr></table>
+<h3>2. Parler de l’amitié</h3><table><tr><th>Avec qui ?</th><th>Depuis quand ?</th><th>Notre relation</th></tr>
+<tr><td>Emma et moi</td><td>Nous nous connaissons depuis l’école maternelle.</td><td>Nous sommes inséparables.</td></tr>
+<tr><td>Adam et moi</td><td>Nous habitons près l’un de l’autre.</td><td>Nous aimons les mêmes sports.</td></tr>
+<tr><td>Inès et moi</td><td>Je l’ai connue à la rentrée.</td><td>Je l’ai trouvée très sympa.</td></tr></table>
+<h3>3. Parler d’un vrai ami</h3><table><tr><th>Situation</th><th>Expression utile</th></tr>
+<tr><td>J’ai un problème.</td><td>Je lui parle de mes problèmes. Elle me donne des conseils.</td></tr>
+<tr><td>J’ai un secret.</td><td>Je lui fais confiance. Je lui confie mes secrets.</td></tr>
+<tr><td>Je joue au basket.</td><td>Mon ami me soutient.</td></tr>
+<tr><td>Nous avons une dispute.</td><td>Nous nous réconcilions vite.</td></tr>
+<tr><td>Nous aimons les mêmes activités.</td><td>Nous avons beaucoup de points en commun.</td></tr></table></div></section>
+<div id="activities"></div>
+<section class="panel"><h2><span class="num">9</span>Construis ton portrait !</h2><p class="sub">Choisis une réponse dans chaque menu. Lis ton texte.</p><div id="builderForm"></div><div class="controls"><button class="primary" id="makePortrait">Créer mon portrait</button></div><p id="portrait" class="answer" aria-live="polite"></p></section>
+<div class="sticky"><strong id="progress">0 activité vérifiée sur 7</strong><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ En haut</button></div>
+</main>
+<script>
+const sections=[
+{type:'dropdown',title:'Le texte à trous',instruction:'Lis le texte. Choisis le bon mot.',intro:'Je m’appelle Lucas. Voici mes amis !',items:[
+['Emma est ma meilleure amie. Elle est ___ et souriante.','rousse',['rousse','blond','grand']],
+['Je la connais ___ l’école maternelle.','depuis',['pendant','depuis','demain']],
+['Nous sommes dans la même ___.','classe',['maison','classe','ville']],
+['Adam est très ___. Il aime le basket.','sportif',['réservée','sportif','rousse']],
+['Chloé porte des ___.','lunettes',['secrets','lunettes','conseils']],
+['Hugo est drôle : il a beaucoup d’___.','humour',['humour','âge','yeux']],
+['Inès a ___ de Lyon.','déménagé',['confié','déménagé','partagé']],
+['Quand j’ai un problème, Emma me donne des ___.','conseils',['défauts','conseils','sports']],
+['Avec Adam, on aime les ___ sports.','mêmes',['petits','mêmes','nouveaux']],
+['Après une dispute, on se ___.','réconcilie',['rencontre','réconcilie','déménage']]]},
+{type:'matching',title:'Associe les expressions',instruction:'Associe chaque expression à sa signification.',items:[
+['faire confiance à quelqu’un','croire en cette personne'],
+['confier un secret','dire quelque chose de personnel'],
+['avoir des points en commun','aimer les mêmes choses'],
+['être inséparables','être presque toujours ensemble'],
+['se disputer','ne pas être d’accord et se fâcher'],
+['se réconcilier','redevenir amis après une dispute'],
+['soutenir un ami','aider et encourager un ami'],
+['déménager','changer de maison ou de ville']]},
+{type:'mcq',title:'Qui est-ce ?',instruction:'Lis la phrase. Choisis le bon personnage.',items:[
+['Elle est rousse et sincère.','Emma',['Emma','Chloé','Inès']],
+['Il est grand, sportif et aime le basket.','Adam',['Lucas','Adam','Hugo']],
+['Elle porte des lunettes.','Chloé',['Emma','Chloé','Inès']],
+['Il est blond et très drôle.','Hugo',['Hugo','Adam','Lucas']],
+['Elle vient de Lyon.','Inès',['Inès','Emma','Chloé']],
+['Il raconte l’histoire.','Lucas',['Adam','Lucas','Hugo']],
+['Il porte un sweat orange.','Lucas',['Hugo','Lucas','Adam']],
+['Elle est nouvelle dans la classe.','Inès',['Chloé','Inès','Emma']]]},
+{type:'mcq',title:'Dans quelle situation ?',instruction:'Lis la situation. Choisis la bonne expression.',items:[
+['Emma écoute les problèmes de Lucas.','Il lui parle de ses problèmes.',['Il lui parle de ses problèmes.','Il se dispute avec elle.','Il déménage.']],
+['Adam encourage Lucas au basket.','Il le soutient.',['Il le soutient.','Il lui confie un secret.','Il est réservé.']],
+['Lucas et Emma aiment les mêmes choses.','Ils ont des points en commun.',['Ils ont des points en commun.','Ils sont fâchés.','Ils habitent loin.']],
+['Deux amis se disputent, puis redeviennent amis.','Ils se réconcilient.',['Ils se rencontrent.','Ils se réconcilient.','Ils déménagent.']],
+['Hugo fait rire ses copains.','Il a beaucoup d’humour.',['Il est de mauvaise humeur.','Il est inséparable.','Il a beaucoup d’humour.']],
+['Lucas raconte un secret à Emma.','Il lui fait confiance.',['Il lui fait confiance.','Il lui donne un ballon.','Il ne la connaît pas.']]]},
+{type:'ordering',title:'Remets les mots dans l’ordre',instruction:'Clique sur les mots dans le bon ordre.',items:[
+['Je connais Emma depuis l’école maternelle.',['depuis','Emma','Je','maternelle.','connais','l’école']],
+['Nous avons beaucoup de points en commun.',['commun.','beaucoup','Nous','points','de','avons','en']],
+['Je lui confie mes secrets.',['mes','lui','secrets.','Je','confie']],
+['Adam me soutient toujours.',['toujours.','me','Adam','soutient']],
+['Hugo a beaucoup d’humour.',['beaucoup','Hugo','d’humour.','a']],
+['Nous nous réconcilions vite.',['vite.','nous','Nous','réconcilions']],
+['Inès est ouverte et intelligente.',['intelligente.','ouverte','est','Inès','et']]]},
+{type:'dropdown',title:'Masculin ou féminin ?',instruction:'Choisis la bonne forme de l’adjectif.',items:[
+['Adam est ___.','sportif',['sportif','sportive']],
+['Emma est ___.','rousse',['roux','rousse']],
+['Chloé est ___.','réservée',['réservé','réservée']],
+['Inès est ___.','ouverte',['ouvert','ouverte']],
+['Lucas est ___.','curieux',['curieux','curieuse']],
+['Emma est ___.','sincère',['sincère','sincèr']],
+['Hugo est ___.','drôle',['drôle','drôlle']],
+['Chloé est ___.','intelligente',['intelligent','intelligente']],
+['Adam est ___.','grand',['grand','grande']],
+['Inès est ___.','gentille',['gentil','gentille']]]},
+{type:'matching',title:'Complète les phrases',instruction:'Associe le début et la fin de chaque phrase.',items:[
+['Je fais confiance à Emma','parce qu’elle est sincère.'],
+['Nous sommes inséparables','depuis l’école maternelle.'],
+['Adam et moi, nous partageons','les mêmes passions.'],
+['Quand j’ai un problème,','je lui demande des conseils.'],
+['Hugo est très drôle :','il a beaucoup d’humour.'],
+['Après une dispute,','on se réconcilie.'],
+['Inès est nouvelle','parce qu’elle a déménagé.']]},
+];
+let checked=new Set();
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function shuffled(a){return [...a].sort(()=>Math.random()-.5)}
+function render(){
+const host=document.getElementById('activities');
+sections.forEach((s,si)=>{
+const box=document.createElement('section');box.className='panel';box.id='act'+si;
+box.innerHTML=`<h2><span class="num">${si+2}</span>${escapeHtml(s.title)}</h2><p class="sub">${escapeHtml(s.instruction)}</p>${s.intro?`<p>${escapeHtml(s.intro)}</p>`:''}<div class="questions"></div><div class="controls"><button class="primary verify">Vérifier</button><button class="secondary reset">Recommencer</button></div><div class="feedback" aria-live="polite"></div>`;
+const qs=box.querySelector('.questions');
+s.items.forEach((it,i)=>{
+let d=document.createElement('div');d.className='rowq';d.dataset.index=i;
+if(s.type==='dropdown'){
+let parts=it[0].split('___');d.innerHTML=`<strong>${i+1}.</strong> ${escapeHtml(parts[0])} <select aria-label="Réponse ${i+1}"><option value="">Choisis…</option>${it[2].map(o=>`<option value="${escapeHtml(o)}">${escapeHtml(o)}</option>`).join('')}</select> ${escapeHtml(parts[1]||'')}`;
+}else if(s.type==='matching'){
+d.classList.add('pair');d.innerHTML=`<span><strong>${i+1}.</strong> ${escapeHtml(it[0])}</span><select aria-label="Association ${i+1}"><option value="">Choisis…</option>${shuffled(s.items.map(x=>x[1])).map(o=>`<option value="${escapeHtml(o)}">${escapeHtml(o)}</option>`).join('')}</select>`;
+}else if(s.type==='mcq'){
+d.innerHTML=`<strong>${i+1}.</strong> ${escapeHtml(it[0])}<div class="choices">${it[2].map((o,k)=>`<button class="choice" type="button" data-value="${escapeHtml(o)}">${String.fromCharCode(65+k)}. ${escapeHtml(o)}</button>`).join('')}</div>`;
+d.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{d.querySelectorAll('.choice').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');d.dataset.value=b.dataset.value});
+}else{
+d.innerHTML=`<strong>${i+1}.</strong><div class="tokens"></div><div class="answer" aria-label="Phrase à construire"></div><button class="secondary clear" type="button" style="margin-top:6px">Effacer</button>`;
+const tokens=d.querySelector('.tokens'),ans=d.querySelector('.answer');
+shuffled(it[1]).forEach((w,k)=>{let b=document.createElement('button');b.className='token';b.textContent=w;b.onclick=()=>{if(b.classList.contains('used'))return;b.classList.add('used');const x=document.createElement('button');x.className='token';x.textContent=w;x.onclick=()=>{b.classList.remove('used');x.remove()};ans.append(x)};tokens.append(b)});
+d.querySelector('.clear').onclick=()=>{ans.innerHTML='';tokens.querySelectorAll('.token').forEach(b=>b.classList.remove('used'))};
+}
+qs.append(d);
+});
+box.querySelector('.verify').onclick=()=>{
+let score=0;s.items.forEach((it,i)=>{let d=qs.children[i];let v=s.type==='mcq'?d.dataset.value:s.type==='ordering'?[...d.querySelector('.answer').children].map(b=>b.textContent).join(' '):d.querySelector('select').value;let correct=s.type==='matching'?it[1]:it[1];let ok=v===correct;if(ok)score++;d.style.borderLeft=ok?'4px solid #2a996a':'4px solid #db7c51';d.style.paddingLeft='9px';});
+box.querySelector('.feedback').textContent=`${score} / ${s.items.length} bonnes réponses. ${score===s.items.length?'Bravo !':'Essaie encore !'}`;box.querySelector('.feedback').className='feedback '+(score===s.items.length?'ok':'bad');checked.add(si);document.getElementById('progress').textContent=`${checked.size} activités vérifiées sur ${sections.length}`};
+box.querySelector('.reset').onclick=()=>{qs.querySelectorAll('select').forEach(x=>x.value='');qs.querySelectorAll('.selected').forEach(x=>x.classList.remove('selected'));qs.querySelectorAll('.rowq').forEach(d=>{d.dataset.value='';d.style.borderLeft='';d.style.paddingLeft='';let a=d.querySelector('.answer');if(a)a.innerHTML='';d.querySelectorAll('.token').forEach(b=>b.classList.remove('used'))});box.querySelector('.feedback').textContent='';checked.delete(si);document.getElementById('progress').textContent=`${checked.size} activités vérifiées sur ${sections.length}`};
+host.append(box);
+});
+}
+render();
+const choices=[
+['Mon meilleur ami s’appelle','Adam.','Hugo.','Lucas.'],
+['Il a','douze ans.','treize ans.','onze ans.'],
+['Il est','grand et sportif.','blond et drôle.','sympa et réservé.'],
+['Je le connais','depuis l’école maternelle.','depuis quatre ans.','depuis la rentrée.'],
+['Nous aimons','les mêmes sports.','la même musique.','les mêmes jeux.'],
+['Quand j’ai un problème,','il me donne des conseils.','il me soutient.','je lui parle de mes problèmes.'],
+['Pour moi, un vrai ami,','c’est quelqu’un qui me comprend.','c’est quelqu’un qui me soutient.','c’est quelqu’un qui garde mes secrets.']
+];
+document.getElementById('builderForm').innerHTML=choices.map((a,i)=>`<div class="pair"><label for="p${i}">${escapeHtml(a[0])}</label><select id="p${i}">${a.slice(1).map(v=>`<option>${escapeHtml(v)}</option>`).join('')}</select></div>`).join('');
+document.getElementById('makePortrait').onclick=()=>{document.getElementById('portrait').textContent=choices.map((a,i)=>a[0]+' '+document.getElementById('p'+i).value).join(' ')};
+</script></body></html>
